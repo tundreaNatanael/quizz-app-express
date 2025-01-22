@@ -80,7 +80,7 @@ app.get('/quiz', (req, res) => {
             answer: "Nile River",
         },
     ];
-    res.json(quizData);
+    res.json(quizData.slice().sort(() => 0.5 - Math.random()).slice(0, 5));
 });
 
 const PORT = 3000;
